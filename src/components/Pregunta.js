@@ -6,6 +6,8 @@ const Pregunta = () => {
 
     const [cantidad, guardarCantidad] = useState(0);
 
+    const [error, guardarError] = useState(false);
+
     //funcion que define el presupuesto, cuando se lee de un input lo lee como string  a pesar que venga como 
     //number, cuando esta azul esta entero
 
@@ -19,8 +21,13 @@ const Pregunta = () => {
         e.preventDefault();
 
         //validar
+        if(cantidad < 1 || isNaN(cantidad)){
+            guardarError(true);
+            return;
+        }
 
         //si se pasa la validacion
+        guardarError(false);
     }
 
     return (  
