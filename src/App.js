@@ -9,11 +9,14 @@ function App() {
   const [restante, guardarRestante] = useState(0);
   const [mostrarpregunta, actualizarPregunta ] = useState(true);
 
+  //carga condicional en react
+
   return (
     <div className="container">
       <header>
          <h1>Gasto Semanal</h1>
             <div className="contenido-principal contenido">
+
               { mostrarpregunta ?  
               
               ( <Pregunta 
