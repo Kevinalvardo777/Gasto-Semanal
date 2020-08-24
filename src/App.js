@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import Pregunta from './components/Pregunta';
 import Forumulario from './components/Formulario';
-import Listado from './components/Listado'
+import Listado from './components/Listado';
+import ControlPresupuesto from './components/ControlPresupuesto';
 
 function App() {
 
@@ -47,6 +48,10 @@ function App() {
                   <div className="one-half column">
                     <Listado 
                         gastos = {gastos}
+                    />
+                    <ControlPresupuesto 
+                        presupuesto={presupuesto}
+                        restante = {restante}
                     />
                   </div>
                 </div>
